@@ -29,7 +29,7 @@ const config = {
   },
   output: {
     filename: "[name].[hash].js",
-    path: DIST_DIR + "/app"
+    path: __dirname
     // publicPath: DIST_DIR + "/app/"
   },
   module: {
