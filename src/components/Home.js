@@ -31,6 +31,16 @@ class Home extends Component {
             <NavLink to="/searchBox">link A</NavLink>
             <NavLink to="/searchBox">link A</NavLink>
           </ul>
+          <ul className="app-items">
+            <h3>Standard</h3>
+            <a href="https://github.com/ninja020250/webpack-config/tree/master">
+              Standard Webpack Config (github)
+            </a>
+            <a href="https://github.com/ninja020250/webpack-config/tree/standard/reactjs/project">
+              Standard Call API Funcion (github)
+            </a>
+            <NavLink to="/searchBox">link A</NavLink>
+          </ul>
         </div>
       </div>
     );
