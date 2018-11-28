@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 var DIST_DIR = path.resolve(__dirname, "dist");
 var SRC_DIR = path.resolve(__dirname, "src");
+
 const Fiber = require("fibers");
 const VENDOR_LIBS = [
   "react",
@@ -29,7 +30,7 @@ const config = {
   },
   output: {
     filename: "[name].[hash].js",
-    path: __dirname
+    path:  DIST_DIR
     // publicPath: DIST_DIR + "/app/"
   },
   module: {
@@ -86,7 +87,9 @@ const config = {
     new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       template: "src/index.html",
-      title: "my toys"
+      title: "my toys",
+      path:__dirname
+
     }),
     new CleanWebpackPlugin(["dist"]),
     new webpack.HotModuleReplacementPlugin()

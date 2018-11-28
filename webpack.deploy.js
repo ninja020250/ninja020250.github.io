@@ -26,7 +26,7 @@ const config = {
   },
   output: {
     filename: "[name].[hash].js",
-    path: DIST_DIR
+    path: path.resolve(__dirname,"../deploy")
     // publicPath: DIST_DIR + "/app/"
   },
   module: {
