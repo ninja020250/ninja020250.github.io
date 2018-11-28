@@ -29,8 +29,8 @@ const config = {
     vendor: VENDOR_LIBS
   },
   output: {
-    filename: "[name].[hash].js",
-    path:  DIST_DIR
+    filename: "[name].js",
+    path:  DIST_DIR,
     // publicPath: DIST_DIR + "/app/"
   },
   module: {

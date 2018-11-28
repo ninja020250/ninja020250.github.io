@@ -22,12 +22,13 @@ const config = {
   mode: "none",
   entry: {
     bundle: SRC_DIR + "/app/index.js",
-    vendor: VENDOR_LIBS
+    vendor: VENDOR_LIBS,
+    
   },
   output: {
     filename: "[name].[hash].js",
-    path: DIST_DIR
-    // publicPath: DIST_DIR + "/app/"
+    path: DIST_DIR,
+    publicPath: DIST_DIR + "/app/"
   },
   module: {
     rules: [
@@ -66,7 +67,7 @@ const config = {
     new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       template: "src/index.html",
-      title: "my toys",
+      title: "my toys"
     }),
     new CleanWebpackPlugin(["dist"]),
     new webpack.HotModuleReplacementPlugin()
